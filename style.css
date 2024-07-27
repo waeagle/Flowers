@@ -1,81 +1,85 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* styles.css */
 body {
-  background-color: #f0f0f0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
 }
 
 .container {
-  position: relative;
-  width: 300px;
-  height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .flower {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .petal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
-  background-color: #ff69b4;
-  border-radius: 50%;
-  animation: spin 2s linear infinite;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ff69b4;
+    transform-origin: center;
 }
 
 .petal-1 {
-  transform: rotate(72deg);
+    top: 50px;
+    left: 50px;
+    transform: rotate(0deg);
 }
 
 .petal-2 {
-  transform: rotate(144deg);
+    top: 75px;
+    left: 25px;
+    transform: rotate(72deg);
 }
 
 .petal-3 {
-  transform: rotate(216deg);
+    top: 75px;
+    right: 25px;
+    transform: rotate(144deg);
 }
 
 .petal-4 {
-  transform: rotate(288deg);
+    bottom: 50px;
+    left: 50px;
+    transform: rotate(216deg);
 }
 
 .petal-5 {
-  transform: rotate(360deg);
+    bottom: 50px;
+    right: 50px;
+    transform: rotate(288deg);
 }
 
 .center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 20px;
-  height: 20px;
-  background-color: #fff;
-  border-radius: 50%;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ffff00;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
-  }
+
+.petal {
+    animation: rotate 5s infinite linear;
 }
