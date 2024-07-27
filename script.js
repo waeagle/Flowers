@@ -1,2 +1,2 @@
 // script.js
-// JavaScript code to control the animations and interactions
+// No JavaScript code is required for this animation
